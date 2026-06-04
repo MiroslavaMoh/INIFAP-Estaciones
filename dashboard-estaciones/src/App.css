@@ -214,21 +214,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.card-maroon {
-  border: 1.5px solid #8B1D3D;
-}
-
-.card-green {
-  border: 1.5px solid #2D5A27;
-}
-
-.card-blue {
-  border: 1.5px solid #3D4C8C;
-}
-
-.card-gold {
-  border: 1.5px solid #B8860B;
-}
 
 .btn-maroon {
   background-color: #8B1D3D;

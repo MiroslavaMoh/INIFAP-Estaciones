@@ -4,20 +4,104 @@
     <meta charset="UTF-8" />
     <!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
     
-    <!-- Estilos de gobierno
+    <!-- Estilos de gobierno -->
     <link href="https://framework-gb.cdn.gob.mx/gm/v3/assets/images/favicon.ico" rel="shortcut icon">
-    <link href="https://framework-gb.cdn.gob.mx/gm/v3/assets/styles/main.css" rel="stylesheet"> -->
+    <link href="https://framework-gb.cdn.gob.mx/gm/v3/assets/styles/main.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
     <title>Tiempo real - Estaciones</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+	<main class="page" style="text-align: left;">
+		
+		<nav class="navbar navbar-expand-md navbar-dark bg-light sub-navbar fixed-top">
+		  <div class="container">
+			<button
+			  type="button"
+			  class="navbar-toggler"
+			  data-bs-toggle="collapse"
+			  data-bs-target="#subNavBarDropdown"
+			  aria-controls="subNavBarDropdown"
+			  aria-expanded="false"
+			  aria-label="Toggle navigation"
+			>
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		
+			<a class="navbar-brand sub-navbar" href="#"></a>
+		
+			<div class="collapse navbar-collapse" id="subNavBarDropdown">
+			  <ul class="navbar-nav">
+				<li class="nav-item "><a class="nav-link subnav-link" href="https://www.gob.mx/tramites" target="_self" title="Ir a trámites del gobierno">Trámites</a></li>
+				<li class="nav-item "><a class="nav-link subnav-link" href="https://www.gob.mx/inifap/archivo/articulos">Blog</a></li>
+				<li class="nav-item "><a class="nav-link subnav-link" href="https://www.gob.mx/inifap/archivo/multimedia">Multimedia</a></li>
+				<li class="nav-item "><a class="nav-link subnav-link" href="https://www.gob.mx/inifap/archivo/prensa">Prensa</a></li>
+				<li class="nav-item "><a class="nav-link subnav-link" href="https://www.gob.mx/inifap/archivo/agenda">Agenda</a></li>
+				<li class="nav-item "><a class="nav-link subnav-link" href="https://www.gob.mx/inifap/archivo/acciones_y_programas">Acciones y programas</a></li>
+				<li class="nav-item "><a class="nav-link subnav-link" href="https://www.gob.mx/inifap/archivo/documentos">Documentos</a></li>
+				<li class="nav-item "><a class="nav-link subnav-link" href="https://vun.inifap.gob.mx/portalweb/_Transparencia">Transparencia</a></li>
+				<li class="nav-item "><a class="nav-link subnav-link" href="https://www.gob.mx/agricultura/es/#344">Contacto</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+		
+        <div class="container">
+            <ol class="breadcrumb top-buffer">
+                <li><a href="http://www.gob.mx"><i class="icon icon-home"></i></a></li>
+                <li><a href="http://www.gob.mx/inifap">Instituto Nacional de Investigaciones Forestales, Agrícolas y Pecuarias</a></li>
+                <li><a href="index.php">Inifap C.E. Zacatecas</a></li>
+                <li class="active">Red de Monitoreo Agroclimático del Estado de Zacatecas</li>
+            </ol>
+        </div>
 
-  <!-- Scripts de GobMX: inserta header y footer del gobierno -->
-  <!--<script src="https://framework-gb.cdn.gob.mx/gm/v3/assets/js/gobmx.js"></script>-->
+        <div class="container">
+        <div class="row">
+            <!-- Primera Columna -->
+            <div class="col-sm-9">
+                <h2>Red de Monitoreo Agroclimático<br>del Estado de Zacatecas</h2>
+                <h3>Mapa de Distribución de Estaciones</h3>
+                      <hr class="red" style="margin-bottom:2em;">
+                <div id="map"></div>
+                <br>
+
+                <!-- Contenedor de elemento react-->
+                
+                <div id="root" style="margin-bottom: 100px; "></div>
+                
+            </div>
+
+
+            <!-- Segunda Columna -->
+            <div class="col-sm-3">
+                <!--SECCIÓN MODIFICABLE | MENU CONTEXTUAL -->
+                <div class="row">
+                <div class="list-group">
+                    <a class="list-group-item" style="text-decoration: none;" href="index.php"><img src="http://zacatecas.inifap.gob.mx/images/templatemo_list.png" style="margin-right:10px;">Inicio</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="estaciones.php"><img src="http://zacatecas.inifap.gob.mx/images/templatemo_list.png" style="margin-right:10px;">Estaciones</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="treal.php?id=18851"><img src="http://zacatecas.inifap.gob.mx/images/templatemo_list.png" style="margin-right:10px;">Tiempo Real</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="historico.php?id=18851"><img src="http://zacatecas.inifap.gob.mx/images/templatemo_list.png" style="margin-right:10px;">Histórico</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="aplicaciones.php?id=18851"><img src="http://zacatecas.inifap.gob.mx/images/templatemo_list.png" style="margin-right:10px;">Aplicaciones</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="boletines.php?id=18851"><img src="http://zacatecas.inifap.gob.mx/images/templatemo_list.png" style="margin-right:10px;">Boletines</a>
+                    <a class="list-group-item" style="text-decoration: none;" href="pronostico.php?id=18851"><img src="http://zacatecas.inifap.gob.mx/images/templatemo_list.png" style="margin-right:10px;">Pronóstico</a>
+                </div>
+            </div>
+                <br>
+        </div>
+        </div>
+        
+        <!-- Scripts de React -->
+        <script type="module" src="/src/main.jsx"></script>
+        <!-- Scripts de gobierno -->
+        <script src="https://framework-gb.cdn.gob.mx/gm/v3/assets/js/gobmx.js"></script>
+		        
+    <script>
+        $gmx(document).ready(function() {
+            
+        });
+	</script>
+
+</body>
 
 </html>

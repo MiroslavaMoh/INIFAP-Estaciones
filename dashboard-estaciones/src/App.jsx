@@ -1,10 +1,11 @@
 import './App.css'
 import React, { useState, useMemo } from 'react';
-import Header from './components/Header'; 
-import Footer from './components/Footer';
 import StationSelectorModal from './components/StationSelectorModal';
 import DetailsIconLeft from './components/DetailsIconLeft';
 import Grafica from './components/Grafica';
+import AlertItem from './components/AlertItem';
+import MetricCard from './components/MetricCard';
+import NumberData from './components/NumberData';
 
 // Iconos
 import { 
@@ -19,7 +20,8 @@ import {
   ArrowDownRight, 
   CheckCircle2, 
   AlertTriangle,
-  BarChart2
+  BarChart2,
+  Pin
 } from 'lucide-react';
 
 const App = () => {
@@ -30,16 +32,6 @@ const App = () => {
     location: 'Mazapil'
   });
 
-  // Colores institucionales GOB.mx
-  const gobColors = {
-    guinda: '#9F2241',
-    verdeOscuro: '#10312B',
-    verdeClaro: '#285C4D',
-    dorado: '#D4C19C',
-    crema: '#B38E5D',
-    gris: '#F4F6F8'
-  };
-
   const handleStationSelect = (station) => {
     setSelectedStation(station);
     console.log('Estación seleccionada:', station);
@@ -47,10 +39,9 @@ const App = () => {
 
   return (
     
-    <div className="min-h-screen bg-[#F4F6F8] font-sans text-gray-800">
-      <Header /> 
+    <div className="min-h-screen font-sans text-gray-800">
       
-      <div className="max-w-7xl mx-auto space-y-6 p-4 md:p-8">
+      <div className="max-w-7xl mx-auto space-y-6 p-0 ">
 
         {/* Componente: Estacion */}
         <header className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
@@ -70,7 +61,7 @@ const App = () => {
                 <h3 className="text-4xl sm:text-5xl font-bold text-[#10312B] tracking-tight text-left">{selectedStation.name}</h3>
                 
                 <div className="flex items-center gap-4">
-                  <span className="text-2xl sm:text-3xl text-gray-600 font-medium">{selectedStation.location}</span>
+                  <h2 className="text-2xl sm:text-3xl text-gray-600 font-medium">{selectedStation.location}</h2>
                   
                 </div>
                   <span className="text-gray-500 mb-6 font-medium">Fecha de Instalación: 08 Julio 2004</span>
@@ -101,110 +92,53 @@ const App = () => {
         </header>
 
         {/* Fila 1: Métricas Principales */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           
-          {/* Componente: Detalle-maximo-minimo */}
           {/* Temperatura */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 relative overflow-hidden">
-            <div className="absolute left-0 top-6 bottom-6 w-2 bg-[#9F2241] rounded-r-md"></div>
-            <div className="pl-4">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="text-gray-500 font-semibold text-lg text-left">Temperatura</h3>
-                <Thermometer className="text-[#9F2241]" size={32} />
+          <MetricCard color="#9F2241" Icon={Thermometer} title="Temperatura">
+            <NumberData Number="24.5" Value="°C" />
+            <div className="grid grid-cols-2 gap-2">
+              <div className="bg-gray-50 rounded-lg p-1 border border-gray-100">
+                <div className="text-xs font-bold text-gray-400 mb-1 text-left">Máximo</div>
+                <div className="font-semibold text-sm text-left">36.4°C</div>
+                <div className="text-xs text-gray-400 text-left">16:15 pm</div>
               </div>
-              <div className="flex items-baseline gap-1 mb-6">
-                <span className="text-4xl font-bold text-[#10312B]">24.5</span>
-                <span className="text-xl font-medium text-gray-500">°C</span>
-              </div>
-              <div className="grid grid-cols-2 gap-2">
-                <div className="bg-gray-50 rounded-lg p-2 border border-gray-100">
-                  <div className="flex items-center gap-1 text-xs font-bold text-gray-400 mb-1 text-left">Máximo</div>
-                  <div className="font-semibold text-sm text-left">36.4°C</div>
-                  <div className="text-xs text-gray-400 text-left">16:15 pm</div>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-2 border border-gray-100">
-                  <div className="flex items-center gap-1 text-xs font-bold text-gray-400 mb-1 text-left"> Mínimo</div>
-                  <div className="font-semibold text-sm text-left">36.4°C</div>
-                  <div className="text-xs text-gray-400 text-left">16:15 pm</div>
-                </div>
+              <div className="bg-gray-50 rounded-lg p-1 border border-gray-100">
+                <div className="text-xs font-bold text-gray-400 mb-1 text-left">Mínimo</div>
+                <div className="font-semibold text-sm text-left">36.4°C</div>
+                <div className="text-xs text-gray-400 text-left">16:15 pm</div>
               </div>
             </div>
-          </div>
+          </MetricCard>
 
-          {/* Componente: Detalle-maximo-minimo */}
           {/* Humedad */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 relative overflow-hidden">
-            <div className="absolute left-0 top-6 bottom-6 w-2 bg-[#285C4D] rounded-r-md"></div>
-            <div className="pl-4">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="text-gray-500 font-semibold text-lg text-left">Humedad relativa</h3>
-                <Droplets className="text-[#285C4D]" size={32} />
+          <MetricCard color="#285C4D" Icon={Droplets} title="Humedad relativa">
+            <NumberData Number="17.2" Value="%" />
+            <div className="grid grid-cols-2 gap-2">
+              <div className="bg-gray-50 rounded-lg p-1 border border-gray-100">
+                <div className="text-xs font-bold text-gray-400 mb-1 text-left">Máximo</div>
+                <div className="font-semibold text-sm text-left">36.4°C</div>
+                <div className="text-xs text-gray-400 text-left">16:15 pm</div>
               </div>
-              <div className="flex items-baseline gap-1 mb-6">
-                <span className="text-4xl font-bold text-[#10312B]">17.2</span>
-                <span className="text-xl font-medium text-gray-500">%</span>
-              </div>
-              <div className="grid grid-cols-2 gap-2">
-                <div className="bg-gray-50 rounded-lg p-2 border border-gray-100">
-                  <div className="flex items-center gap-1 text-xs font-bold text-gray-400 mb-1 text-left"> Máximo</div>
-                  <div className="font-semibold text-sm text-left">36.4°C</div>
-                  <div className="text-xs text-gray-400 text-left">16:15 pm</div>
-                </div>
-                <div className="bg-gray-50 rounded-lg p-2 border border-gray-100">
-                  <div className="flex items-center gap-1 text-xs font-bold text-gray-400 mb-1 text-left"> Mínimo</div>
-                  <div className="font-semibold text-sm text-left">36.4°C</div>
-                  <div className="text-xs text-gray-400 text-left">16:15 pm</div>
-                </div>
+              <div className="bg-gray-50 rounded-lg p-1 border border-gray-100">
+                <div className="text-xs font-bold text-gray-400 mb-1 text-left">Mínimo</div>
+                <div className="font-semibold text-sm text-left">36.4°C</div>
+                <div className="text-xs text-gray-400 text-left">16:15 pm</div>
               </div>
             </div>
-          </div>
+          </MetricCard>
 
-          {/* Componente: Detalle-total */}
           {/* Precipitación */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 relative overflow-hidden">
-            <div className="absolute left-0 top-6 bottom-6 w-2 bg-[#10312B] rounded-r-md"></div>
-            <div className="pl-4">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="text-gray-500 font-semibold text-lg">Precipitación</h3>
-                <CloudRain className="text-[#10312B]" size={32} />
-              </div>
-              <div className="flex items-baseline gap-1 mb-6">
-                <span className="text-4xl font-bold text-[#10312B]">0.0</span>
-                <span className="text-xl font-medium text-gray-500">mm</span>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-3 border border-gray-100 flex items-center gap-3">
-                <ArrowUpRight className="text-gray-400" size={20} />
-                <div>
-                  <div className="text-xs font-bold text-gray-400 text-left">Total acumulada</div>
-                  <div className="font-semibold text-md text-left">0.0mm</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <MetricCard color="#10312B" Icon={CloudRain} title="Precipitación">
+            <NumberData Number="0.0" Value="mm" />
+            <DetailsIconLeft IconDetail={ArrowUpRight} TitleDetail="Total acumulada" TextDetail="0.0mm" />
+          </MetricCard>
 
-          {/* Componente: Detalle-total */}
           {/* Radiación */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 relative overflow-hidden">
-            <div className="absolute left-0 top-6 bottom-6 w-2 bg-[#D4C19C] rounded-r-md"></div>
-            <div className="pl-4">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="text-gray-500 font-semibold text-lg">Radiación</h3>
-                <Sun className="text-[#D4C19C]" size={32} />
-              </div>
-              <div className="flex items-baseline gap-1 mb-6">
-                <span className="text-4xl font-bold text-[#10312B]">0.0</span>
-                <span className="text-xl font-medium text-gray-500">W/m²</span>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-3 border border-gray-100 flex items-center gap-3">
-                <ArrowUpRight className="text-gray-400" size={20} />
-                <div>
-                  <div className="text-xs font-bold text-gray-400 text-left">Total registrada</div>
-                  <div className="font-semibold text-md text-left">27,710 W/m²</div>
-                </div>
-              </div>
-              
-            </div>
-          </div>
+          <MetricCard color="#D4C19C" Icon={Sun} title="Radiación">
+            <NumberData Number="0.0" Value="W/m²" />
+            <DetailsIconLeft IconDetail={ArrowUpRight} TitleDetail="Total registrada" TextDetail="27,710 W/m²" />
+          </MetricCard>
 
         </div>
 
@@ -213,43 +147,21 @@ const App = () => {
           
           {/* Componente: Detalles-mensaje*/}
           {/* Alerta */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col">
-            
-            <div className="p-6 relative">
-              <div className="absolute left-0 top-6 bottom-6 w-2 bg-[#9F2241] rounded-r-md"></div>
-              <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-2xl font-bold text-[#10312B]">Estado* (por ver)</h3>
-                  <AlertTriangle className="text-gray-400" size={28} />
-              </div>
+          <MetricCard color="#9F2241" Icon={AlertTriangle} title="Estado">
+          
+                <AlertItem type="condiciones" message="Ventana favorable baja deriva y temperatura estable." />
+                <AlertItem type="alerta" message="Ráfagas de viento de 22.8 km/h registradas a las 01:30 PM." />
               
-              <div className="space-y-4 pl-4">
-                <div className="bg-[#285C4D]/10 border border-[#285C4D]/20 rounded-xl p-4 flex gap-3">
-                  <CheckCircle2 className="text-[#285C4D] shrink-0 mt-0.5" size={20} />
-                  <div>
-                    <p className="text-xs font-bold text-[#285C4D] uppercase tracking-wider mb-1 text-left">Condiciones</p>
-                    <p className="text-sm text-[#10312B] font-medium leading-relaxed text-left">Ventana favorable baja deriva y temperatura estable.</p>
-                  </div>
-                </div>
-
-                <div className="bg-[#D4C19C]/20 border border-[#D4C19C]/40 rounded-xl p-4 flex gap-3">
-                  <AlertTriangle className="text-[#B38E5D] shrink-0 mt-0.5" size={20} />
-                  <div>
-                    <p className="text-xs font-bold text-[#B38E5D] uppercase tracking-wider mb-1 text-left">Alerta</p>
-                    <p className="text-sm text-[#10312B] font-medium leading-relaxed text-left">Ráfagas de viento de 22.8 km/h registradas a las 01:30 PM.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </MetricCard>
 
           {/* Componente: Grafica*/}
           {/* Card Gráfica Interactiva */}
-          <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
-            <div className="absolute left-0 top-6 bottom-6 w-2 bg-[#9F2241] rounded-r-md"></div>
-            <div className="p-6 pl-10 h-full flex flex-col">
+          <div className="lg:col-span-2">
+            <MetricCard color="#9F2241" Icon={BarChart2} title="Histórico de 24 hrs">
+            
               <div className="flex justify-between items-start mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-[#10312B] text-left">Histórico de 24 Horas</h3>
+                  
                   <div className="flex gap-4 items-center mt-2">
                     <span className="flex items-center gap-1 text-xs text-gray-500 font-medium">
                       <div className="w-3 h-3 rounded-full bg-[#D4C19C]"></div> Temperatura
@@ -268,7 +180,8 @@ const App = () => {
               <div className="flex-grow w-full mt-2 min-h-[200px] relative">
                <Grafica></Grafica>
               </div>
-            </div>
+            
+            </MetricCard>
           </div>
         </div>
 
@@ -277,13 +190,9 @@ const App = () => {
           
           {/* Componente: Detalles-mensaje (variables: icono, titulo, contenido)*/}
           {/* Ubicación */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 relative overflow-hidden">
-             <div className="absolute left-0 top-6 bottom-6 w-2 bg-[#9F2241] rounded-r-md"></div>
-             <div className="pl-4">
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-2xl font-bold text-[#10312B]">Ubicación</h3>
-                  <MapPin className="text-gray-400" size={28} />
-                </div>
+          <div className="relative overflow-hidden h-full">
+            <MetricCard color="#9F2241" Icon={MapPin} title="Ubicación">
+             
                 
                 <div className="space-y-3">
                   <DetailsIconLeft
@@ -302,28 +211,20 @@ const App = () => {
                     TextDetail="1670 msnm."
                   />
                 </div>
-             </div>
+             
+            </MetricCard>
           </div>
 
           {/* Componente: Detalles-maximo-minimo-media */}
           {/* Viento */}
-          <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-6 relative overflow-hidden">
-             <div className="absolute left-0 top-6 bottom-6 w-2 bg-gray-300 rounded-r-md"></div>
-             <div className="pl-4 flex flex-col h-full">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-gray-500 font-semibold text-lg mb-1">Velocidad y dirección del viento</h3>
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-4xl font-bold text-[#10312B]">3.8</span>
-                      <span className="text-xl font-medium text-gray-500">Km/hr</span>
-                    </div>
-                  </div>
-                  <Wind className="text-gray-400" size={48} strokeWidth={1.5} />
-                </div>
+          <div className="relative overflow-hidden lg:col-span-2 h-full">
+            <MetricCard color="#7e7e7e" Icon={Wind} title="Velocidad y dirección del viento">
+             
+                <NumberData Number="3.8" Value="Km/hr" />
 
                 <div className="mt-auto space-y-3">
-                  <div className="bg-gray-50 rounded-lg p-3 border border-gray-100 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
+                  <div className="bg-gray-50 rounded-lg p-2 border border-gray-100 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
                       <ArrowUpRight className="text-gray-400" size={20} />
                       <div>
                         <div className="text-xs font-bold text-gray-400 text-left">Máximo</div>
@@ -335,8 +236,8 @@ const App = () => {
                     </div>
                   </div>
 
-                  <div className="bg-gray-50 rounded-lg p-3 border border-gray-100 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
+                  <div className="bg-gray-50 rounded-lg p-2 border border-gray-100 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
                       <ArrowDownRight className="text-gray-400" size={20} />
                       <div>
                         <div className="text-xs font-bold text-gray-400">Mínimo</div>
@@ -348,8 +249,8 @@ const App = () => {
                     </div>
                   </div>
 
-                  <div className="bg-gray-50 rounded-lg p-3 border border-gray-100 flex items-center justify-between">
-                    <div className="flex items-center gap-3">
+                  <div className="bg-gray-50 rounded-lg p-2 border border-gray-100 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
                       <ArrowDownRight className="text-gray-400" size={20} />
                       <div>
                         <div className="text-xs font-bold text-gray-400 text-left">Media</div>
@@ -360,12 +261,14 @@ const App = () => {
                       {/* No hay hora específica para la media */}
                     </div>
                   </div>
-                </div>
+                  
 
              </div>
+            </MetricCard>
           </div>
 
         </div>
+        
       </div>
 
       {/* Modal de selección de estación */}
@@ -374,7 +277,6 @@ const App = () => {
         onClose={() => setIsModalOpen(false)}
         onStationSelect={handleStationSelect}
       />
-      <Footer /> 
     </div>
   );
 };
