@@ -1,0 +1,30 @@
+.container {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #9ca3af;
+  text-align: left;
+  margin: 0;
+}
+
+.value {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: left;
+  margin: 0;
+  color: #111827;
+}

@@ -1,24 +1,16 @@
-/* Tailwind dentro de un layer → prioridad menor que los estilos sin layer (Bootstrap/GOB.mx) */
-@import "tailwindcss" layer(tailwind);
-
-/* Fuentes del proyecto */
+/* Fuente principal del proyecto */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* Estilos para Leaflet */
-.leaflet-container {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.leaflet-popup-content-wrapper {
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.leaflet-popup-content {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
+
+/* Leaflet */
+.leaflet-container { font-family: 'Montserrat', sans-serif; }
+.leaflet-popup-content-wrapper { border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.leaflet-popup-content { margin: 0; font-family: 'Montserrat', sans-serif; }

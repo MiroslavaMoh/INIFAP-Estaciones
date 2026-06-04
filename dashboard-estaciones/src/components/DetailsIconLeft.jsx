@@ -1,13 +1,15 @@
+import styles from './DetailsIconLeft.module.css';
+
 const DetailsIconLeft = ({ IconDetail, TitleDetail, TextDetail }) => {
-    return (
-        <div className="bg-gray-50 rounded-lg p-1 border border-gray-100 flex items-center gap-2">
-            {IconDetail && <IconDetail className="text-gray-400" size={20} />}
-            <div>
-                <div className="text-xs font-bold text-gray-400 text-left">{TitleDetail}</div>
-                <div className="font-semibold text-md text-left">{TextDetail}</div>
-            </div>
-        </div>
-    );
+  return (
+    <div className={styles.container}>
+      {IconDetail && <IconDetail className={styles.icon} size={20} />}
+      <div>
+        <p className={styles.label}>{TitleDetail}</p>
+        <p className={styles.value}>{TextDetail}</p>
+      </div>
+    </div>
+  );
 };
 
 export default DetailsIconLeft;
