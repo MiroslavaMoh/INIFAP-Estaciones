@@ -214,18 +214,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-
-.btn-maroon {
-  background-color: #8B1D3D;
-  color: white;
-  transition: all 0.2s ease;
-}
-
-.btn-maroon:hover {
-  background-color: #6b162f;
-  box-shadow: 0 4px 12px rgba(139, 29, 61, 0.2);
-}
-
 .stat-box {
   background-color: #f1f5f9;
   border: 1px solid #e2e8f0;

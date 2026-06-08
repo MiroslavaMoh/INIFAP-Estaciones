@@ -50,12 +50,16 @@ const App = () => {
                   <p className={styles.updateValue}>28 de Abril del 2026, 7:30 p.m.</p>
                 </div>
               </div>
-              <button className={styles.selectBtn} onClick={() => setIsModalOpen(true)}>
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#StationSelectorModal">
+                Seleccionar estación
+              </button>
+              <button className="btn btn-primary btn-sm" onClick={() => setIsModalOpen(true)}>
                 Seleccionar estación
               </button>
             </div>
           </div>
         </header>
+
 
         {/* ── Fila 1: Métricas ── */}
         <div className={styles.grid4}>
@@ -129,7 +133,7 @@ const App = () => {
                     Precipitación
                   </span>
                 </div>
-                <button className={styles.verGraficasBtn}>Ver gráficas</button>
+                <button className="btn btn-primary btn-sm">Ver gráficas</button>
               </div>
               <div className={styles.graficaContainer}>
                 <Grafica />

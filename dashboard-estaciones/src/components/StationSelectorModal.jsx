@@ -48,7 +48,7 @@ const StationSelectorModal = ({ isOpen, onClose, onStationSelect }) => {
 
         {/* Encabezado */}
         <div className={styles.modalHeader}>
-          <h3 className={styles.modalTitle}>Seleccionar Estación</h3>
+          <h3>Seleccionar Estación</h3>
           <button className={styles.closeBtn} onClick={onClose}>
             <X size={24} />
           </button>
@@ -77,8 +77,8 @@ const StationSelectorModal = ({ isOpen, onClose, onStationSelect }) => {
                 >
                   <div className={styles.stationItemRow}>
                     <div>
-                      <p className={styles.stationName}>{station.name}</p>
-                      <p className={styles.stationLocation}>{station.location}</p>
+                      <h6>{station.name}</h6>
+                      <p className={styles.descriptiontext}>{station.location}</p>
                     </div>
                     <div className={styles.stationMeta}>
                       <div className={`${styles.statusDot} ${station.active ? styles.statusActive : styles.statusInactive}`} />
@@ -92,7 +92,8 @@ const StationSelectorModal = ({ isOpen, onClose, onStationSelect }) => {
             <button
               onClick={handleConfirmSelection}
               disabled={!selectedStation}
-              className={`${styles.confirmBtn} ${selectedStation ? styles.confirmBtnActive : styles.confirmBtnDisabled}`}
+              className="btn btn-primary btn-sm"
+              style={{ marginTop: '1rem', width: '100%' }}
             >
               Seleccionar Estación
             </button>
