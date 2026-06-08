@@ -50,9 +50,7 @@ const App = () => {
                   <p className={styles.updateValue}>28 de Abril del 2026, 7:30 p.m.</p>
                 </div>
               </div>
-              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#StationSelectorModal">
-                Seleccionar estación
-              </button>
+
               <button className="btn btn-primary btn-sm" onClick={() => setIsModalOpen(true)}>
                 Seleccionar estación
               </button>

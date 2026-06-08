@@ -14,8 +14,8 @@
 }
 
 .label {
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
   color: #9ca3af;
   text-align: left;
   margin: 0;
@@ -23,7 +23,7 @@
 
 .value {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   text-align: left;
   margin: 0;
   color: #111827;

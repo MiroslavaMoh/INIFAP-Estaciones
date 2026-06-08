@@ -19,8 +19,8 @@ const Grafica = () => {
     });
   }, []);
 
-  const chartWidth = 800;
-  const chartHeight = 150;
+  const chartWidth = 750;
+  const chartHeight = 250;
   const maxBarHeight = 45;
   const maxPrecip = 5;
   const barWidth = chartWidth / mockChartData.length;
@@ -36,7 +36,7 @@ const Grafica = () => {
 
   return (
     <svg
-      viewBox="0 -10 800 210"
+      viewBox="0 -10 800 250"
       className="w-full h-full overflow-visible"
       preserveAspectRatio="none"
       onMouseLeave={() => setHoveredIndex(null)}
@@ -64,7 +64,7 @@ const Grafica = () => {
             <text
               x={getX(i)}
               y={chartHeight - h - 4}
-              fontSize="9"
+              fontSize="0.875rem"
               fill="#0ea5e9"
               textAnchor="middle"
               fontWeight="bold"
@@ -86,7 +86,8 @@ const Grafica = () => {
           key={hourIndex}
           x={getX(hourIndex)}
           y={chartHeight + 25}
-          fontSize="11"
+          fontSize="1.5rem"
+          fontWeight="bold"
           fill="#9ca3af"
           textAnchor="middle"
         >
@@ -124,17 +125,17 @@ const Grafica = () => {
           <circle cx={getX(hoveredIndex)} cy={getHumY(mockChartData[hoveredIndex].humidity)} r="5" fill="white" stroke="#3b82f6" strokeWidth="2.5" />
 
           <g transform={`translate(${getX(hoveredIndex) > chartWidth / 2 ? getX(hoveredIndex) - 145 : getX(hoveredIndex) + 15}, 10)`}>
-            <rect x="0" y="0" width="130" height="92" fill="white" stroke="#e5e7eb" strokeWidth="1" rx="6" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))" />
-            <text x="15" y="24" fontSize="13" fontWeight="bold" fill="#10312B">
+            <rect x="0" y="0" width="200" height="92" fill="white" stroke="#e5e7eb" strokeWidth="1" rx="6" filter="drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))" />
+            <text x="15" y="24" fontSize="2rem" fontWeight="bold" fill="#10312B">
               {mockChartData[hoveredIndex].hour} hrs
             </text>
-            <text x="15" y="44" fontSize="12" fill="#6b7280">
+            <text x="15" y="44" fontSize="1.75rem"fill="#6b7280">
               Temp: <tspan fill="#B38E5D" fontWeight="bold">{mockChartData[hoveredIndex].temp.toFixed(1)}°C</tspan>
             </text>
-            <text x="15" y="62" fontSize="12" fill="#6b7280">
+            <text x="15" y="62" fontSize="1.75rem" fill="#6b7280">
               Hum: <tspan fill="#3b82f6" fontWeight="bold">{mockChartData[hoveredIndex].humidity.toFixed(1)}%</tspan>
             </text>
-            <text x="15" y="80" fontSize="12" fill="#6b7280">
+            <text x="15" y="80" fontSize="1.75rem" fill="#6b7280">
               Prec: <tspan fill="#0ea5e9" fontWeight="bold">{mockChartData[hoveredIndex].precip.toFixed(1)} mm</tspan>
             </text>
           </g>

@@ -18,8 +18,8 @@
   background: white;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-  border: 1px solid #f3f4f6;
+  border: 1px solid #e6e6e6;
+
 }
 
 .stationRow {
@@ -189,7 +189,7 @@
 }
 
 .statLabel {
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #9ca3af;
   margin: 0 0 0.25rem;
@@ -198,13 +198,14 @@
 
 .statValue {
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   text-align: left;
   margin: 0;
 }
 
 .statTime {
-  font-size: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
   color: #9ca3af;
   text-align: left;
   margin: 0;
@@ -223,7 +224,7 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   color: #6b7280;
   font-weight: 500;
 }
@@ -242,31 +243,13 @@
   margin-bottom: 1.5rem;
 }
 
-.verGraficasBtn {
-  background-color: #9F2241;
-  color: white;
-  font-weight: 500;
-  padding: 0.5rem 1.25rem;
-  border-radius: 9999px;
-  border: none;
-  font-size: 0.875rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  display: none;
-}
-
-.verGraficasBtn:hover {
-  background-color: #691C32;
-}
-
-@media (min-width: 640px) {
-  .verGraficasBtn { display: block; }
-}
 
 .graficaContainer {
   flex-grow: 1;
   width: 100%;
   margin-top: 0.5rem;
+  margin-left: 10px;
+  margin-right: 10px;
   min-height: 200px;
   position: relative;
 }
@@ -298,7 +281,7 @@
 .windInfo { flex: 1; }
 
 .windLabel {
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #9ca3af;
   text-align: left;
@@ -307,7 +290,7 @@
 
 .windValue {
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   color: #10312B;
   margin: 0;
 }
@@ -316,6 +299,6 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   color: #6b7280;
 }
