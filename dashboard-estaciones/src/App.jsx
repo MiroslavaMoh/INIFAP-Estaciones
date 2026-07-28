@@ -3,7 +3,6 @@ import styles from './App.module.css';
 import StationSelectorModal from './components/StationSelectorModal';
 import DetailsIconLeft from './components/DetailsIconLeft';
 import Grafica from './components/Grafica';
-import AlertItem from './components/AlertItem';
 import MetricCard from './components/MetricCard';
 import NumberData from './components/NumberData';
 
@@ -60,7 +59,17 @@ const App = () => {
 
 
         {/* ── Fila 1: Métricas ── */}
-        <div className={styles.grid4}>
+        <div className={styles.grid3}>
+
+          <div className={styles.fullHeight}>
+            <MetricCard color="#9F2241" Icon={MapPin} title="Ubicación">
+              <div className={styles.spaceY}>
+                <DetailsIconLeft IconDetail={ArrowUpRight}   TitleDetail="Longitud" TextDetail={`102° 9' 6.0"`} />
+                <DetailsIconLeft IconDetail={ArrowDownRight} TitleDetail="Latitud"  TextDetail={`24° 11' 08.3"`} />
+                <DetailsIconLeft IconDetail={ArrowDownRight} TitleDetail="Altitud"  TextDetail="1670 msnm." />
+              </div>
+            </MetricCard>
+          </div>
 
           <MetricCard color="#9F2241" Icon={Thermometer} title="Temperatura">
             <NumberData Number="24.5" Value="°C" />
@@ -94,6 +103,13 @@ const App = () => {
             </div>
           </MetricCard>
 
+        </div>
+
+        
+
+        {/* ── Fila 2: Ubicación + Viento ── */}
+        <div className={styles.grid4}>
+
           <MetricCard color="#10312B" Icon={CloudRain} title="Precipitación">
             <NumberData Number="0.0" Value="mm" />
             <DetailsIconLeft IconDetail={ArrowUpRight} TitleDetail="Total acumulada" TextDetail="0.0 mm" />
@@ -104,57 +120,7 @@ const App = () => {
             <DetailsIconLeft IconDetail={ArrowUpRight} TitleDetail="Total registrada" TextDetail="27,710 W/m²" />
           </MetricCard>
 
-        </div>
-
-        {/* ── Fila 2: Estado + Gráfica ── */}
-        <div className={styles.grid3}>
-
-          <MetricCard color="#9F2241" Icon={AlertTriangle} title="Estado">
-            <AlertItem type="condiciones" message="Ventana favorable baja deriva y temperatura estable." />
-            <AlertItem type="alerta"      message="Ráfagas de viento de 22.8 km/h registradas a las 01:30 PM." />
-          </MetricCard>
-
-          <div className={`${styles.colSpan2} ${styles.fullHeight}`}>
-            <MetricCard color="#9F2241" Icon={BarChart2} title="Histórico de 24 hrs">
-              <div className={styles.graficaHeaderRow}>
-                <div className={styles.legendRow}>
-                  <span className={styles.legendItem}>
-                    <span className={styles.legendDot} style={{ backgroundColor: '#D4C19C' }} />
-                    Temperatura
-                  </span>
-                  <span className={styles.legendItem}>
-                    <span className={styles.legendDot} style={{ backgroundColor: '#3b82f6' }} />
-                    Humedad
-                  </span>
-                  <span className={styles.legendItem}>
-                    <span className={styles.legendDot} style={{ backgroundColor: '#0ea5e9' }} />
-                    Precipitación
-                  </span>
-                </div>
-                <button className="btn btn-primary btn-sm">Ver gráficas</button>
-              </div>
-              <div className={styles.graficaContainer}>
-                <Grafica />
-              </div>
-            </MetricCard>
-          </div>
-
-        </div>
-
-        {/* ── Fila 3: Ubicación + Viento ── */}
-        <div className={styles.grid3}>
-
-          <div className={styles.fullHeight}>
-            <MetricCard color="#9F2241" Icon={MapPin} title="Ubicación">
-              <div className={styles.spaceY}>
-                <DetailsIconLeft IconDetail={ArrowUpRight}   TitleDetail="Longitud" TextDetail={`102° 9' 6.0"`} />
-                <DetailsIconLeft IconDetail={ArrowDownRight} TitleDetail="Latitud"  TextDetail={`24° 11' 08.3"`} />
-                <DetailsIconLeft IconDetail={ArrowDownRight} TitleDetail="Altitud"  TextDetail="1670 msnm." />
-              </div>
-            </MetricCard>
-          </div>
-
-          <div className={`${styles.colSpan2} ${styles.fullHeight}`}>
+            <div style={{ gridColumn: 'span 2' }}>
             <MetricCard color="#7e7e7e" Icon={Wind} title="Velocidad y dirección del viento">
               <NumberData Number="3.8" Value="Km/hr" />
               <div className={styles.spaceY}>
@@ -191,14 +157,42 @@ const App = () => {
                   </div>
                   <span className={styles.windTime} />
                 </div>
+              </div>
+            </MetricCard>
+            </div>
 
+        </div>
+
+        {/* ── Fila 2: Estado + Gráfica ── */}
+
+
+          <div className={` ${styles.fullHeight}`}>
+            <MetricCard color="#9F2241" Icon={BarChart2} title="Histórico de 24 hrs">
+              <div className={styles.graficaHeaderRow}>
+                <div className={styles.legendRow}>
+                  <span className={styles.legendItem}>
+                    <span className={styles.legendDot} style={{ backgroundColor: '#D4C19C' }} />
+                    Temperatura
+                  </span>
+                  <span className={styles.legendItem}>
+                    <span className={styles.legendDot} style={{ backgroundColor: '#3b82f6' }} />
+                    Humedad
+                  </span>
+                  <span className={styles.legendItem}>
+                    <span className={styles.legendDot} style={{ backgroundColor: '#0ea5e9' }} />
+                    Precipitación
+                  </span>
+                </div>
+                {/* ── <button className="btn btn-primary btn-sm">Ver gráficas</button> ── */}
+              </div>
+              <div className={styles.graficaContainer}>
+                <Grafica />
               </div>
             </MetricCard>
           </div>
 
         </div>
 
-      </div>
 
       <StationSelectorModal
         isOpen={isModalOpen}
