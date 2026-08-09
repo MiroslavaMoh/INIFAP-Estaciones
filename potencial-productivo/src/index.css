@@ -1,0 +1,16 @@
+/* Fuente principal del proyecto */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Leaflet */
+.leaflet-container { font-family: 'Montserrat', sans-serif; }
+.leaflet-popup-content-wrapper { border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.leaflet-popup-content { margin: 0; font-family: 'Montserrat', sans-serif; }

@@ -1,0 +1,312 @@
+/* ── Contenedor raíz ── */
+.wrapper {
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Tarjeta de estación (header) ── */
+.stationCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e6e6e6;
+
+}
+
+.stationRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .stationRow {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.timeTag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.stationName {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #10312B;
+  letter-spacing: -0.025em;
+  text-align: left;
+  margin: 0 0 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .stationName { font-size: 3rem; }
+}
+
+.stationLocation {
+  font-size: 1.5rem;
+  color: #4b5563;
+  font-weight: 500;
+  margin: 0 0 0.25rem;
+}
+
+.stationDate {
+  color: #6b7280;
+  font-weight: 500;
+  display: block;
+}
+
+/* Columna derecha del header */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .rightCol {
+    align-items: flex-end;
+    width: auto;
+  }
+}
+
+.updateBox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f9fafb;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #f3f4f6;
+}
+
+.updateLabel {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+}
+
+.updateValue {
+  font-weight: 600;
+  color: #10312B;
+  margin: 0;
+}
+
+.selectBtn {
+  background-color: #9F2241;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 100%;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.selectBtn:hover {
+  background-color: #691C32;
+}
+
+@media (min-width: 1024px) {
+  .selectBtn { width: auto; }
+}
+
+/* ── Grillas ── */
+.grid4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .grid4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .grid3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.colSpan2 {
+  grid-column: span 1;
+}
+
+@media (min-width: 1024px) {
+  .colSpan2 { grid-column: span 2; }
+}
+
+.fullHeight {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Mini grilla 2 columnas (máx/mín) ── */
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.statBox {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #f3f4f6;
+}
+
+.statLabel {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #9ca3af;
+  margin: 0 0 0.25rem;
+  text-align: left;
+}
+
+.statValue {
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: left;
+  margin: 0;
+}
+
+.statInfo {
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-align: left;
+  margin: 0;
+}
+
+.statTime {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #9ca3af;
+  text-align: left;
+  margin: 0;
+}
+
+/* ── Sección gráfica ── */
+.legendRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.25rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.legendDot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.graficaHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+
+.graficaContainer {
+  flex-grow: 1;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-left: 30px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  min-height: 200px;
+  position: relative;
+}
+
+/* ── Fila de viento ── */
+.spaceY {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.windRow {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.windLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.windInfo { flex: 1; }
+
+.windLabel {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #9ca3af;
+  text-align: left;
+  margin: 0;
+}
+
+.windValue {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #10312B;
+  margin: 0;
+}
+
+.windTime {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.25rem;
+  color: #6b7280;
+}
