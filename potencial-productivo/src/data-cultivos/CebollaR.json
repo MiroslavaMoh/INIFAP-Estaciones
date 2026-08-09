@@ -1,0 +1,18 @@
+{
+  "cultivo": "Cebolla",
+  "nombre_cientifico": "Allium cepa L.",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Otoño/Primavera",
+  "regimen_humedad": "Riego",
+  "plantacion_labranza": "Manual y mecánica (siembra, almácigo y trasplante)",
+  "variedad": "Grain, White, White Tampico",
+  "densidad_plantacion": "1 kg/ha (semilla de almácigo)",
+  "epoca_plantacion": "Almácigo de diciembre a enero. Trasplante en el mes de [no especificado con claridad en el PDF original]",
+  "notas": "Potencial de producción: Alto y mediano. No se indican notas con asterisco en el documento.",
+  "fertilizacion": "Aplicar la dosis 140-60-60 + 15 kg de zinc. Fraccionar la aplicación al menos en dos partes: la mitad del nitrógeno, todo el fósforo y el zinc antes del trasplante; el resto se aplicará unos 50 días después de la plantación. La cebolla tiene un sistema radicular [poco profundo, texto incompleto], por lo que el fertilizante se debe aplicar lo más cerca posible de la planta, en banda, abajo y a un lado.",
+  "control_plagas": "Trips: aplicar 1.0 L/ha de azinfos metílico 20 E o diazinón 25 E, o 1.5 L/ha [de otro producto no especificado con claridad]. Minador de la hoja: aplicar cualquiera de los siguientes insecticidas: 0.5 kg/ha de metomilo, 1.5 L/ha de diazinón, azinfos metílico, 2.0 L/ha de malatión 1000 E o abamectina 0.5 L/ha.",
+  "control_enfermedades": "Mancha púrpura: aplicar una mezcla de maneb y zineb, usando 1.5 kg/ha de cada uno, o maneb 200 [dosis incompleta en el PDF original].",
+  "control_malezas": "Se deben evitar las malezas mediante cultivos y deshierbes manuales durante el ciclo, ya que la maleza ofrece ventajas competitivas frente al cultivo. La aplicación de herbicidas es recomendable para eliminar las hierbas del hilo de siembra con productos [no especificados con claridad] en preemergencia, o fluazifop-butil (1 a 2 L/ha), oxadiazón (3 a 4 L/ha) en postemergencia.",
+  "otras_actividades": "Programa de riegos: el primer riego es el de trasplante; al tercer día se da un \"sobre riego\"; a los ocho días se aplica el \"riego de ocho\"; y a los 15 días se da el cuarto. A partir de ahí, la frecuencia de riegos dependerá de cómo se presenten las condiciones climáticas y la humedad en el suelo; en promedio se aplican diez riegos.",
+  "rendimiento_potencial": "50 t/ha."
+}

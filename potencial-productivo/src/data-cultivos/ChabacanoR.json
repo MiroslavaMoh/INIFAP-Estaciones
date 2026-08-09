@@ -1,0 +1,18 @@
+{
+  "cultivo": "Chabacano",
+  "nombre_cientifico": "Prunus amygdalus L. (tal como aparece en el documento original)",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Perenne",
+  "regimen_humedad": "Riego",
+  "plantacion_labranza": "Mecánica y manual",
+  "variedad": "Canino, Criollo",
+  "densidad_plantacion": "400 árboles/ha (5 x 5 m)",
+  "epoca_plantacion": "Durante el invierno [texto incompleto en el PDF original]",
+  "notas": "* Centímetros cúbicos (cc). ** Gramos (g). Potencial de producción: Alto y mediano.",
+  "fertilizacion": "Los primeros cuatro años del huerto aplicar la dosis 25-25-25; en huertos en producción 65-65-65 para las de alto potencial y 40-40-40 para las de mediano potencial. Para árboles de uno a cuatro años de edad, el nitrógeno, fósforo y potasio se aplican mezclados durante el período de lluvia. A partir del quinto año, el nitrógeno se aplica después de la cosecha, mientras que el potasio y el fósforo se aplican en el período de lluvias. Programa de riegos: aplicar 5 o 6 riegos por año con una lámina de 15 cm cada uno. El primer riego antes de la brotación; durante el desarrollo de los frutos se dan dos riegos a intervalos de 20 a 25 días, hasta el establecimiento del temporal, y finalmente se aplica un último riego.",
+  "control_plagas": "Barrenador de las ramas: Paration metílico 80 E (4.0 cc), Malatión 1000 E (8.0 a 12.0 cc), Diazinón 50 PH (8.0 a 12.0 cc), Permetrina 340 CE (2.0 cc), Fosmet 50 PH (8.0 a 12.0 cc), Bacillus thuringiensis - Bt (2.0 g). (Dosis por litro de agua). El documento no detalla otras plagas específicas para este cultivo.",
+  "control_enfermedades": "Como medidas preventivas para evitar la pudrición del cuello se sugiere nivelar el terreno o trazar curvas a nivel; en huertos con suelos pesados drenar el exceso de agua y evitar el rastreo antes de riegos pesados. Se puede aplicar el hongo Trichoderma harzianum a razón de 2 kg/ha durante la floración o al iniciar la primavera, dirigiendo la aspersión al cuello del árbol. También se puede utilizar el fungicida sistémico metalaxil, un litro en 400 litros de agua, aplicando 1, 2, 3 o 4 litros de la mezcla por árbol si el diámetro del tronco es menor a 2, [rango incompleto] o mayor de 12.5 cm, respectivamente. Para controlar el cáncer perenne se sugiere: a) disminuir el daño por insectos y enfermedades, b) promover un crecimiento adecuado, c) remover toda la madera débil o muerta del árbol, d) cortar 20 a 30 cm abajo del cáncer y quemar la madera, e) cubrir los cortes con pintura de aceite blanca más el fungicida thiram.",
+  "control_malezas": "Las épocas críticas para el control de maleza son la segunda fase de crecimiento del fruto, la maduración del fruto y la poscosecha (cuando se fertiliza). El control se puede hacer con pasos de desvaradora o chapeadora entre las hileras. Es recomendable reducir el paso de rastra en los huertos a uno o máximo dos pasos al año: uno antes de la temporada de lluvias (asociado a la fertilización con fósforo y potasio) y otro en la época de poscosecha (fertilización nitrogenada).",
+  "otras_actividades": "Realizar la poda de formación en los primeros cuatro años; a partir del quinto año se deben despuntar las ramas (aproximadamente una cuarta parte de su longitud original) y llevar a cabo un aclareo de ramas, dejando una distancia de alrededor de 10 cm entre ramas mixtas.",
+  "rendimiento_potencial": "En las zonas de alto potencial: 12 t/ha. En las de mediano potencial: 8 t/ha."
+}

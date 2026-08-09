@@ -1,0 +1,18 @@
+{
+  "cultivo": "Guayabo",
+  "nombre_cientifico": "Psidium guajava L.",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Primavera/Verano",
+  "regimen_humedad": "Riego",
+  "plantacion_labranza": "Manual",
+  "variedad": "Media China, China, Criollo de la región",
+  "densidad_plantacion": "7 x 7 o 6 x 6 metros; 204 o 277 plantas/ha",
+  "epoca_plantacion": "Al inicio de la temporada [de lluvias, texto incompleto en el PDF original]",
+  "notas": "Potencial de producción: Alto y mediano. No se indican notas con asterisco en el documento.",
+  "fertilizacion": "En los municipios de Villanueva, Tabasco y Huanusco: aplicar la dosis 40-80-40 al rompimiento del [calmeo, texto incompleto], y aplicar la dosis 40-00-40 cuando el fruto está en etapa de canica. En los municipios de Jalpa, Apozol, Juchipila y Moyahua [de Estrada]: aplicar la dosis [no especificada con claridad]-100-50 al rompimiento del calmeo; posteriormente, aplicar la dosis 40-00-50 cuando el fruto está en etapa de canica. El fertilizante se debe depositar dentro del área del cajete de los árboles, a una distancia aproximada de 1.0 metro del tronco, incorporándolo a una profundidad de 15 cm, y en seguida dar un riego pesado. Se recomienda aplicar anualmente hasta 20 kg de abono orgánico por árbol, incorporándolo a una profundidad de alrededor de 15 cm.",
+  "control_plagas": "Picudo de la guayaba (Conotrachelus dimidiatus): aplicar paration metílico CE [dosis incompleta], malatión CE 50 en dosis de 250-350 cc, o azinfos metílico PH 35 en cantidad de 119 gramos; estas cantidades se diluyen [en un volumen no especificado con claridad] de agua, aplicando cuando se detecte un picudo por árbol en el manteo. Mosca de la guayaba (Anastrepha striata): el control se realiza con insecticidas cebo, elaborados con cuatro partes de proteína hidrolizada, una parte de malatión y 95 partes [de agua u otro componente], en aplicaciones en hileras alternas; el control se realiza cuando se detecte un promedio de 0.08 moscas por trampa al día.",
+  "control_enfermedades": "Clavo (Colletotrichum gloeosporioides, Pestalotia sp.): se previene con aspersiones foliares de productos a base de cobre, en dosis de 300 a 400 gramos por 100 litros de agua; las aplicaciones se realizan de junio a octubre. Problemas de raíz (Phytophthora sp.): evitar encharcamientos y aplicar carbofurán SA 35 o etoprofos G en dosis de 150 a 250 gramos por árbol; la aplicación se realiza antes del primer riego de postquiescencia o riego de [presiembra, texto incompleto en el PDF original].",
+  "control_malezas": "Generalmente se realiza en forma manual mediante una \"cazanga\"; se sugiere hacer dos controles al año: uno en agosto y el segundo antes del período de cosecha. El control químico se realiza con gramoxone SA 20 (2 L/ha), procurando no tocar ninguna parte del guayabo porque lo quema; también se puede usar glifosato SA (1 a 2 L/ha) con boquilla dirigida; en ambos casos son necesarias dos aplicaciones al año.",
+  "otras_actividades": "No se especifican otras actividades adicionales en el documento (sección presente pero sin contenido detallado).",
+  "rendimiento_potencial": "40 t/ha."
+}

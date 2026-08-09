@@ -1,0 +1,18 @@
+{
+  "cultivo": "Cebada maltera",
+  "nombre_cientifico": "Hordeum vulgare L.",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Otoño/Primavera",
+  "regimen_humedad": "Riego",
+  "plantacion_labranza": "Mecánica y manual",
+  "variedad": "Esperanza, Puebla, Esmeralda",
+  "densidad_plantacion": "Densidad de siembra: 100 kg/ha (surcos doble hilera al voleo) y 120 kg/ha (corrugaciones)",
+  "epoca_plantacion": "15 de diciembre en adelante [texto repetido e incompleto para cada sistema de siembra en el PDF original]",
+  "notas": "Potencial de producción: Alto y mediano. No se indican notas con asterisco en el documento.",
+  "fertilizacion": "Usar la dosis 120-60-60 en dos aplicaciones: 60-60-60 antes o al momento de la siembra, y 60-[valor incompleto]-00 en la etapa de amacollamiento del cultivo.",
+  "control_plagas": "Pulgón del follaje, pulgón del cogollo y pulgón de la espiga: se puede aplicar metomilo 90 PS o pirimor en dosis de 250 a 300 g/ha, diazinón 0.750 a 1.0 L/ha, dimetoato 40E 1 L/ha, [otro producto no especificado con claridad], malatión 1000 E 1.0 L/ha, todos diluidos en 400 litros de agua. Contra la rata de campo y ardillas, aplicar cebos envenenados comerciales.",
+  "control_enfermedades": "No son de importancia económica.",
+  "control_malezas": "Control mecánico: se realiza en forma indirecta cuando la siembra se efectúa en tierra húmeda [texto incompleto en el PDF original]; antes de sembrar se rastrea y la maleza presente se elimina. Control químico: aplicar el herbicida 2,4-D Amina en dosis de 1.5 [L/ha, dato incompleto] de producto comercial diluido en 400 litros de agua. La aplicación debe hacerse hasta antes de la etapa de amacollamiento del cultivo.",
+  "otras_actividades": "Programa de riegos: el de siembra, el de descostre o de emergencia, y no debe faltar el agua en las etapas de embuche, espigamiento, grano lechoso y grano masoso. No se especifican otras actividades adicionales en el documento.",
+  "rendimiento_potencial": "En las zonas de alto potencial: 6 t/ha. En las de mediano potencial: 5 t/ha."
+}

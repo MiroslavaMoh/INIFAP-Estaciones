@@ -1,0 +1,18 @@
+{
+  "cultivo": "Maíz",
+  "nombre_cientifico": "Zea mays L.",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Primavera/Verano",
+  "regimen_humedad": "Riego",
+  "plantacion_labranza": "Mecánica en surcos",
+  "variedad": "Potencial alto: H-311, de ciclo vegetativo de 145-150 días, de compañías privadas. Potencial mediano: H-220, de 130 días de ciclo vegetativo, de compañías privadas",
+  "densidad_plantacion": "Densidad de siembra: 60,000-65,000 plantas/ha (potencial alto) y 70,000 plantas/ha (potencial mediano)",
+  "epoca_plantacion": "Del 20 de abril al 10 de [fecha incompleta] (potencial alto). Del 1 al 30 de mayo (potencial mediano)",
+  "notas": "Potencial de producción: Alto y mediano. El mapa de este documento está rotulado como \"Zonas potenciales para maíz forrajero de riego\", pero el contenido técnico corresponde al cultivo de maíz para grano (rendimientos en t/ha de grano, no de materia verde/forraje); se transcribe tal como aparece en el PDF original.",
+  "fertilizacion": "En las áreas de alto potencial aplicar la dosis 180-60-00, y en las de mediano potencial 160-60-00; aplicando la mitad del nitrógeno y todo el fósforo al momento de la siembra, y la otra mitad del nitrógeno en la primera escarda.",
+  "control_plagas": "Plagas del suelo: aplicar 25 kg/ha de carbofurán 5% granulado, 20 kg/ha de terbufos 5G o [otro producto] 4G. Gusano cogollero: aplicar 10 kg/ha de carbarilo 5G o clorpirifós 3G, o 15 kg/ha de triclorfón 2.5G. Gusano soldado: aplicar 1.5 kg/ha de carbarilo 80 PH, 0.75 L/ha de metamidofos 600, o 1.5 kg/ha de triclorfón 80PH. Araña roja: aplicar jabón [dosis no especificada con claridad] de oxidemetón metílico, 1.5 L/ha de azinfos metílico 20 o de malatión 1000E, o 1 L/ha de paration metílico 720.",
+  "control_enfermedades": "Sembrar las variedades anotadas y en las fechas recomendadas.",
+  "control_malezas": "Control mecánico mediante una escarda tres semanas después de la nacencia del maíz, y una [segunda escarda tiempo] después. Control químico en preemergencia: aplicar atrazina 50 a razón de 1.5 a 2.0 kg/ha. En postemergencia: aplicar [herbicida no especificado con claridad] a razón de 1.0 a 1.5 L/ha.",
+  "otras_actividades": "Si se usa fertirrigación, la dosis de fertilización es la misma.",
+  "rendimiento_potencial": "En las áreas de alto potencial: 8.0 a 10.0 t/ha. En las de mediano potencial: 6.0 a 8.0 t/ha, dependiendo de la calidad con que se apliquen las labores de cultivo."
+}

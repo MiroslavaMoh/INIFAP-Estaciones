@@ -1,0 +1,18 @@
+{
+  "cultivo": "Girasol",
+  "nombre_cientifico": "Helianthus annuus L.",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Primavera/Verano",
+  "regimen_humedad": "Temporal",
+  "plantacion_labranza": "Mecánica",
+  "variedad": "En el Altiplano: Victoria, Peredovik, Vniimk-1646. En Los Cañones: Victoria, CIANOC-2, CIANOC-3, RIB-77",
+  "densidad_plantacion": "Densidad de siembra: 40,000-45,000 plantas/ha (5-7 kg/ha de semilla)",
+  "epoca_plantacion": "Desde el inicio del temporal [texto incompleto en el PDF original]",
+  "notas": "Potencial de producción: Alto y mediano. No se indican notas con asterisco en el documento.",
+  "fertilizacion": "Aplicar al momento de la siembra la dosis 40-40-00 en el Altiplano, y 80-40-00 en Los Cañones.",
+  "control_plagas": "Picudo del capítulo (Rhynchites mexicanus): paration metílico CE 50, dosis 1.5 L/ha. Palomilla del capítulo (Homoeosoma electellum): paration metílico CE 50, dosis 1.0 L/ha. Mayate (Cotinis mutabilis): malatión CE 100, dosis 1.0 L/ha. (Época de aplicación no especificada con claridad en el PDF original).",
+  "control_enfermedades": "Las enfermedades que ocasionalmente se observan en el girasol son la cenicilla y la roya del capítulo. La primera se presenta después de la floración, y la segunda cuando las lluvias coinciden con ella; sin embargo, no son de importancia económica significativa.",
+  "control_malezas": "Realizar por lo menos dos escardas, complementando con deshierbes manuales.",
+  "otras_actividades": "Para una buena polinización se sugiere instalar colmenas de tres a cinco días antes del inicio de la floración [texto incompleto en el PDF original], a razón de [número no especificado con claridad] por hectárea.",
+  "rendimiento_potencial": "1.3 t/ha."
+}

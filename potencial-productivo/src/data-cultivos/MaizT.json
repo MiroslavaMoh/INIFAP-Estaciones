@@ -1,0 +1,18 @@
+{
+  "cultivo": "Maíz",
+  "nombre_cientifico": "Zea mays L.",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Primavera/Verano",
+  "regimen_humedad": "Temporal",
+  "plantacion_labranza": "Tracción mecánica en surcos",
+  "variedad": "Potencial alto: H-311, HV-313, Halcón. Potencial mediano: Halcón, VS-201, Cafime",
+  "densidad_plantacion": "Densidad de siembra: 40,000 plantas/ha (15 kg/ha de semilla)",
+  "epoca_plantacion": "Antes del 20 de junio y antes del 25 de junio (variedades de potencial alto). Antes del 20 de junio y antes del 30 de junio (variedades de potencial mediano)",
+  "notas": "Potencial de producción: Alto y mediano. No se indican notas con asterisco en el documento.",
+  "fertilizacion": "En las áreas de alto potencial aplicar la dosis 80-40-00 o 100-40-00, poniendo la mitad del nitrógeno y todo el fósforo al momento de la siembra, y la otra mitad del nitrógeno en la primera escarda. En las áreas de mediano potencial aplicar la dosis 40-40-00 o [dosis mayor no especificada con claridad] al momento de la siembra. En ambos casos, aplicar la dosis mayor en caso de precipitación mayor a la normal.",
+  "control_plagas": "Gusano cogollero: aplicar 10 kg/ha de carbarilo 5G o clorpirifós 3G, o 15 kg/ha de triclorfón 2.5G. Gusano soldado: aplicar 1.5 kg/ha de carbarilo 80 PH, 0.75 L/ha de metamidofos 600, o 1.5 kg/ha de triclorfón 80PH.",
+  "control_enfermedades": "Sembrar las variedades anotadas y en las fechas recomendadas.",
+  "control_malezas": "Control mecánico mediante una escarda tres semanas después de la nacencia del maíz, y una segunda [escarda cierto número de] días después. Control químico en preemergencia: aplicar atrazina 50 a razón de 1.5 a 2.0 kg/ha. En postemergencia: aplicar [herbicida no especificado con claridad] a razón de 1.0 a 1.5 L/ha.",
+  "otras_actividades": "Piletear en la segunda escarda.",
+  "rendimiento_potencial": "En las áreas de alto potencial: 2.5 a 4.0 t/ha. En las de mediano potencial: 1.5 a 2.5 t/ha, dependiendo de la cantidad y distribución de la lluvia."
+}

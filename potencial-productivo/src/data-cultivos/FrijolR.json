@@ -1,0 +1,18 @@
+{
+  "cultivo": "Frijol",
+  "nombre_cientifico": "Phaseolus vulgaris L.",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Primavera/Verano",
+  "regimen_humedad": "Riego y medio riego",
+  "plantacion_labranza": "Mecánica en surcos",
+  "variedad": "Flor de Mayo, Manzano, Negro Zacatecas, Flor de Mayo Sol",
+  "densidad_plantacion": "Densidad de siembra: 40, 50, 35 y 40 kg/ha, respectivamente para las variedades listadas",
+  "epoca_plantacion": "Riego: del 25 de marzo al 25 de [fecha incompleta en el PDF original]. Medio riego: del 15 de mayo al 15 de [fecha incompleta en el PDF original]",
+  "notas": "Potencial de producción: Alto y mediano. No se indican notas con asterisco en el documento.",
+  "fertilizacion": "Aplicar al momento de la siembra la dosis 50-60-00.",
+  "control_plagas": "Gusano de alambre, gallina ciega y mosca de la semilla: aplicar 25 kg/ha de carbofurán/terbufos 5G o 25 kg/ha de diazinón 4G; se aplican cuando se encuentren tres gusanos en un cubo de suelo [tamaño no especificado con claridad]. Chicharritas: cuando al mover el follaje vuelan de tres a cinco por planta, aplicar 0.3 L/ha de ometoato 1000E, 1.0 kg/ha de carbarilo, dimetoato 40E o 1.0 L/ha de oxidemetón metílico L25. Conchuela o borreguillo: aplicar 1.0 L/ha de azinfos metílico 20[E], [otro producto] 1000E, 15.0 kg/ha de carbarilo 7.5P, 1.0 kg/ha de carbarilo 80PH o 1.0 kg/ha de triclorfón 80PH, cuando se observen [cierto número de] daños por metro lineal de surco.",
+  "control_enfermedades": "Sembrar las variedades anotadas y en las fechas recomendadas.",
+  "control_malezas": "Control mecánico mediante dos cultivos: el primero a los 25 a 35 días después de la siembra, y el segundo 30 días después del primero. Control químico: aplicar bentazon en dosis de 1.5 a 2.0 L/ha cuando se cubre totalmente el terreno; si la aplicación es en banda, se aplica de 0.5 a 0.7 L/ha. También se recomienda aplicar el herbicida fomesafen, en dosis de 0.35 L/ha si la aplicación es en banda, o [dosis mayor no especificada con claridad] L/ha si la aplicación es total.",
+  "otras_actividades": "Se recomienda seleccionar semilla del lote más sano y desmezclarla si tiene granos de otra variedad; seleccionar granos de tamaño uniforme y de la variedad. Almacenar la semilla por separado en un lugar fresco y ventilado, y fumigarla para evitar daños de plagas durante su almacenamiento.",
+  "rendimiento_potencial": "2.6 a 3.1 t/ha."
+}

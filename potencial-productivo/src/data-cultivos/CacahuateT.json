@@ -1,0 +1,18 @@
+{
+  "cultivo": "Cacahuate",
+  "nombre_cientifico": "Arachis hypogaea L.",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Primavera/Verano",
+  "regimen_humedad": "Temporal",
+  "plantacion_labranza": "Mecánica o manual",
+  "variedad": "Veracruz-3*, Blanco del Río-2*, Early Bunch*, Manfredi VA-5**, Virginia Bunch*, Guanajuato-1**, Bachimba-74*, Criollo americano, Criollo regional*",
+  "densidad_plantacion": "80 a 100 mil plantas/ha (variedades de árbol); 50 a 65 mil plantas/ha (variedades de guía); 60 a 80 kg de semilla/ha",
+  "epoca_plantacion": "Desde el inicio del temporal [texto incompleto en el PDF original]",
+  "notas": "* Variedades de mata o árbol. ** Variedades de hábito rastrero o guía. Potencial de producción: Alto y mediano.",
+  "fertilizacion": "En general no es necesario fertilizar, ya que el cacahuate responde mejor a la fertilidad residual del suelo que a aplicaciones directas de fertilizante; además la planta obtiene el nitrógeno por medio de bacterias presentes en el suelo. Para un aprovechamiento eficaz deben practicarse las rotaciones de cultivo indicadas y sembrar en suelos apropiados. Se puede aplicar la dosis 40-[valor incompleto]-00 en la siembra o en la primera escarda. Cuando las plantas manifiestan \"amarillamiento\" (clorosis), efectuar durante el ciclo dos a cuatro aplicaciones de una mezcla de [dos componentes, uno de ellos] sulfato de fierro con un kilo de urea \"desbiuretizada\", disueltos en 100 litros de agua.",
+  "control_plagas": "Contra la diabrótica (Diabrotica balteata) o el chapulín (Melanoplus spp): aplicar triclorfón o carbaril 80 PH (1 kg/ha) o paratión metílico 50 CE (1 L/ha) cuando se observen dos adultos de diabrótica por planta o los primeros chapulines. Contra la chicharrita: cuando se observe enchinamiento de hojas tiernas o cierto número de individuos por planta, aplicar 1.0 L de paratión metílico M-72, 1.0 L de malatión 1000, o 300 g [de otro producto] por hectárea. Plagas del suelo (incluyendo gusano de alambre): el control general debe realizarse cuando en años anteriores haya habido presencia y daño; se sugiere el uso de 20 kg de carbofurán G 5% o diazinón 4% por hectárea, aplicado en la siembra para evitar la penetración de los \"clavos\".",
+  "control_enfermedades": "No se presentan enfermedades de importancia económica, aunque se sugiere tomar medidas preventivas para evitarlas.",
+  "control_malezas": "Mediante dos escardas y deshierbes, o mediante la aplicación de herbicidas: metolachlor [dosis incompleta], o metribuzin 50 PH (1 kg/ha); la mezcla de herbicida y agua debe aplicarse en preemergencia, después de la siembra pero antes de que [germine el cultivo/las malezas], de preferencia sobre suelo libre de maleza y húmedo.",
+  "otras_actividades": "Cosecha: consiste en tres operaciones: 1) cavar (trozar) y voltear las plantas para exponer las vainas, 2) el secado o \"cura\" natural de los frutos, y 3) la trilla con la combinada para cacahuate. Para la cava se deben hacer muestreos a partir de las 12 semanas después del inicio de floración, realizándose cuando el porcentaje de frutos maduros lo indique. El volteo manual consiste en levantar las plantas, sacudirlas para tirar la tierra adherida a las vainas y colocarlas expuestas al sol. A los tres o cuatro días después de voltear las plantas se realiza el \"achorizamiento\", que consiste en agrupar las plantas de cinco surcos vecinos en una hilera, donde el cacahuate estará listo para trillarse cuando su contenido de humedad sea el apropiado para su almacenamiento.",
+  "rendimiento_potencial": "1.5 a 2.0 t/ha."
+}

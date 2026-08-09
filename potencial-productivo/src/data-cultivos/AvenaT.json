@@ -1,0 +1,18 @@
+{
+  "cultivo": "Avena",
+  "nombre_cientifico": "Avena sativa L.",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Verano/Otoño",
+  "regimen_humedad": "Temporal",
+  "plantacion_labranza": "Mecánica y manual",
+  "variedad": "Potencial alto: Cevamex, Karma, Teporaca, Bachíniva, Menona, Cuauhtémoc, Papigochi, Cusihuiriachi. Potencial mediano: Teporaca, Bachíniva, Menona, Cuauhtémoc, Papigochi, Cusihuiriachi",
+  "densidad_plantacion": "Densidad de siembra: 100 kg/ha (surcos doble hilera con pileteo) y 130 kg/ha (corrugaciones con pileteo o alveolo)",
+  "epoca_plantacion": "Inicio del temporal [texto repetido e incompleto en el PDF original para cada sistema de siembra]",
+  "notas": "Potencial de producción: Alto y mediano. No se indican notas con asterisco en el documento.",
+  "fertilizacion": "Usar la dosis 40-40-40, antes o al momento de la siembra.",
+  "control_plagas": "Pulgón del follaje, pulgón del cogollo y pulgón de la espiga: se puede aplicar metomilo/pirimicarb en dosis de 250 a 300 g/ha, diazinón 0.750 a 1.0 L/ha, dimetoato 40E 1 L/ha, ometoato 84LM 0.4 L/ha, malatión [dosis no especificada con claridad], todos diluidos en 400 litros de agua. Contra la rata de campo y ardillas, aplicar cebos envenenados comerciales.",
+  "control_enfermedades": "Sembrar variedades recomendadas.",
+  "control_malezas": "Control mecánico: se realiza en forma indirecta cuando la siembra se efectúa en tierra húmeda [texto incompleto en el PDF original]; antes de sembrar se rastrea y la maleza presente se elimina. Control químico: aplicar el herbicida 2,4-D Amina en dosis de 1.5 [L/ha, dato incompleto] de producto comercial diluido en 400 litros de agua. La aplicación debe hacerse hasta antes de la etapa de amacollamiento del cultivo.",
+  "otras_actividades": "Se sugiere realizar la práctica del pileteo en los sistemas de siembra en surcos a doble hilera y en corrugaciones, para captar y retener el agua de lluvia del temporal.",
+  "rendimiento_potencial": "Alto: 2.5 a 3.0 t/ha. Mediano: 2.0 a 2.5 t/ha."
+}

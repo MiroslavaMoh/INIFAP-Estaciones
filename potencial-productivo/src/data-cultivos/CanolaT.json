@@ -1,0 +1,18 @@
+{
+  "cultivo": "Canola",
+  "nombre_cientifico": "Brassica napus",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Primavera/Verano",
+  "regimen_humedad": "Temporal",
+  "plantacion_labranza": "Mecánica",
+  "variedad": "Híbridos de la serie Hyola",
+  "densidad_plantacion": "Densidad de siembra: 2 a 3 kg/ha",
+  "epoca_plantacion": "Al inicio del temporal",
+  "notas": "Potencial de producción: Alto y mediano. No se indican notas con asterisco en el documento.",
+  "fertilizacion": "Para un temporal de 500 a 600 mm en el ciclo de cultivo, se sugiere la fórmula 90-40-00, aplicando todo el fósforo en la siembra si existe buena humedad o en la primera labor; la otra mitad de nitrógeno se aplica en la segunda [labor, texto incompleto en el PDF original].",
+  "control_plagas": "Pulga saltona (Phyllotreta sp.): se presenta en la etapa de plántula, atacando las dos primeras hojas; se controla cuando el número de insectos por planta es mayor de tres, con endosulfán 35 E (1.5 L/ha). Gusano de la col (Pieris rapae): puede presentarse durante todo el ciclo, con mayor incidencia de floración a madurez; control químico con metamidofos 600E (1 L/ha). Pulgón (Brevicoryne brassicae L.): se presenta durante todo el ciclo, causando su mayor daño cuando no se forman las silicuas (reduciendo el rendimiento), con mayor intensidad en floración; se controla con los mismos productos que las plagas anteriores. Frailecillo (Macrodactylus mexicanus): ataca durante todo el ciclo, con mayor daño durante la floración, alimentándose de las silicuas en formación y bajando el rendimiento; control químico con [producto] metílico a razón de 1 L/ha.",
+  "control_malezas": "Se recomienda dar dos escardas: la primera 25 días después de la siembra, cuando la planta tenga alrededor de 15 cm, y la segunda cuando la planta alcance una altura de 30 a 40 cm (15 a 20 días después de la primera).",
+  "control_enfermedades": "Chahuixtle blanco (Albugo candida): puede presentarse durante todo el ciclo, causando su mayor daño durante la floración en variedades de la especie napus; el eje floral y las silicuas se hinchan, presentando un aspecto deformado con coloración blanca; el control químico se puede realizar con productos a base de azufre. Alternaria (Alternaria brassicae) (Berk) Sacc.: producida por un hongo que origina pequeñas manchas en tallos y hojas; el ataque intenso en las silicuas ocasiona que la semilla no se desarrolle, reduciendo el rendimiento y produciendo semilla de mala calidad; se pueden realizar aplicaciones de maneb 200 (mancozeb, 800 g de ingrediente activo/kg) [dosis incompleta en el PDF original].",
+  "otras_actividades": "Cosecha: se puede realizar en forma manual o mecanizada. La manual es para superficies [pequeñas, texto incompleto], cuando las silicuas se tornan de color amarillo o café; se sugiere realizar muestreos consecutivos para determinar si se debe trillar, ya que esto se hace cuando la mayoría de las semillas han cambiado de color verdoso a amarillo y, al presionarlas, la semilla no se comprime; se corta con hoz o rozadera y se forman piñas para propiciar su secado y posteriormente trillar. La cosecha mecanizada se realiza con cosechadora de cereales de grano pequeño, a la cual se deben hacer ajustes: cubrir los agujeros con cinta de aislar por donde se pueda tirar la semilla, quitar el papalote a las máquinas que lo tengan fijo, y en el sistema hidráulico se recomienda levantar al máximo y darle un movimiento rotatorio rápido. Calibrar la abertura del cóncavo para no dejar impurezas en la semilla y para no tirar semilla con la paja que sale de la máquina. Se recomienda trillar durante la mañana para evitar pérdidas por desgrane al medio día.",
+  "rendimiento_potencial": "2 a 3 t/ha."
+}

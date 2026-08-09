@@ -1,0 +1,18 @@
+{
+  "cultivo": "Jitomate",
+  "nombre_cientifico": "Lycopersicum esculentum Mill.",
+  "tipo_produccion": "Agrícola",
+  "ciclo": "Primavera/Verano",
+  "regimen_humedad": "Riego",
+  "plantacion_labranza": "Manual y mecánica",
+  "variedad": "Peto Super, Río Grande, Río Grande Gala, Ace, Río Fuego, Missouri Young, San Marzano, Yaqui, Maya, Roma, Homestead",
+  "densidad_plantacion": "18,600 a 26,800 plantas/ha",
+  "epoca_plantacion": "En abril o mayo, una vez pasado el riesgo de heladas",
+  "notas": "Potencial de producción: Alto y mediano. Las primeras cuatro variedades tienen un ciclo de 90 días después del trasplante; las siguientes ocho, de 90 a 100 días; y [las restantes, dato incompleto en el PDF original].",
+  "fertilizacion": "Aplicar la dosis 180-60-60, poniendo la mitad del nitrógeno, todo el fósforo y todo el potasio al momento de la siembra, y el resto del nitrógeno 40 días después.",
+  "control_plagas": "Gusano del fruto (Heliothis zea): carbarilo PH 80 (1.0-1.5 kg/ha), paration metílico CE 54 (1.0-1.5 L/ha) o permetrina CE 34 (0.4-0.5 L/ha). Mosquita blanca (Trialeurodes vaporariorum): metamidofos LS 60 (1.0-1.5 L/ha), diazinón CE 23 (1.0-1.5 L/ha) o metamidofos LT 96 (1.0-1.5 L/ha). Minador (Liriomyza spp): ometoato LS 80 (0.6-0.9 L/ha), diazinón CE 23 (1.0-1.5 L/ha) o esfenvalerato CE 11 (0.36-0.45 L/ha). Gusano falso medidor (Trichoplusia ni): Bacillus thuringiensis PH 3.2 (0.5-1.0 kg/ha), metomilo PS 90 (0.4 kg/ha) o esfenvalerato CE 11 (0.36-0.45 L/ha). Gusano del cuerno (Manduca spp): carbarilo PH 80 (1.0-1.5 kg/ha), endosulfán CE 38 (2.0 L/ha) o metamidofos LT 96 (1.0-1.5 L/ha). (Épocas de aplicación indicadas en el documento como 'aplicar cuando aparezcan los primeros síntomas/daños', con detalle truncado en el PDF original).",
+  "control_enfermedades": "Tizón temprano (Alternaria solani) y tizón tardío (Phytophthora infestans): anilazina PH 50 (2.0-4.0 kg), oxicloruro de cobre PH 50 (2.0-4.0 kg), maneb PH 80 (2.0-3.0 kg), zineb PH 80 (2.0-3.0 kg), clorotalonil SA 72 (1.5-2.5 L) o mancozeb PH 62 (1.5-3.0 kg). Mancha bacteriana (Xanthomonas vesicatoria): oxicloruro de cobre PH 50 (2.0-4.0 kg). Mancha gris (Stemphylium solani) y moho de la hoja (Cladosporium fulvum): maneb PH 80 (2.0-3.0 kg), anilazina PH 50 (2.0-4.0 kg), oxicloruro de cobre PH 50 (2.0-4.0 kg), zineb PH 80 (2.0-3.0 kg), clorotalonil SA 72 (1.5-2.5 L) o mancozeb PH 62 (1.5-3.0 kg). Cáncer bacteriano (Corynebacterium michiganense): oxicloruro de cobre PH 50 (2.0-4.0 kg). (Dosis por hectárea). Aplicar cuando existan condiciones favorables para el desarrollo de la enfermedad o cuando aparezcan los primeros síntomas.",
+  "control_malezas": "Realizar por lo menos dos escardas y deshierbes manuales. También se puede usar el herbicida [no especificado con claridad] a razón de 500 g/ha, o bensulide CE 48 en dosis de 12 a 14 L/ha.",
+  "otras_actividades": "Establecer el almácigo en enero o febrero. La cantidad de semilla a usar en el almácigo para trasplantar una hectárea es de 300 g aproximadamente, en una superficie de 20 metros cuadrados.",
+  "rendimiento_potencial": "Con variedades de hábito indeterminado: 120 t/ha. Con variedades de hábito determinado: [dato incompleto en el PDF original]."
+}
