@@ -9,3 +9,18 @@
   height: 100%;
   width: 100%;
 }
+
+.mapOverlayMessage {
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  color: #374151;
+  font-weight: 500;
+  pointer-events: none;
+}

@@ -1,37 +1,40 @@
 import React, { useState, useMemo } from 'react';
-import { MapPin, Search, RotateCcw, Map as MapIcon, Sprout, Clock } from 'lucide-react';
+import { MapPin, Search, RotateCcw, Map as MapIcon, Sprout, Clock, ArrowUpRight, ArrowDownRight, ChevronDown, ChevronUp } from 'lucide-react';
 import styles from './CultivoSelector.module.css';
 import MapaPotencial from './MapaPotencial';
 import CuidadoCultivo from './CuidadoCultivo';
+import DetailsIconLeft from './DetailsIconLeft';
+import { useCultivos } from '../hooks/useCultivos';
 
-const mockCultivos = [
-  { id: 1, name: 'Ajo',    fullName: 'Allium sativum, L.',              lat: 24.11, lng: -102.09, active: true,  ciclo: 'Otoño/Primavera', riego: 'Riego',    potencial: 'alto'  },
-  { id: 2, name: 'Frijol', fullName: 'Phaseolus vulgaris, L.',          lat: 23.18, lng: -102.87, active: true,  ciclo: 'Primavera/Verano', riego: 'Temporal', potencial: 'medio' },
-  { id: 3, name: 'Maiz',   fullName: 'Zea mays, L.',                    lat: 22.65, lng: -102.99, active: false, ciclo: 'Primavera/Verano', riego: 'Temporal', potencial: 'bajo'  },
-  { id: 4, name: 'Sorgo',  fullName: 'Sorghum bicolor, (L.) Moench',    lat: 23.63, lng: -103.64, active: true,  ciclo: 'Primavera/Verano', riego: 'Riego',    potencial: 'medio' },
-  { id: 5, name: 'Trigo',  fullName: 'Triticum aestivum, L.',           lat: 23.83, lng: -103.03, active: true,  ciclo: 'Otoño/Primavera', riego: 'Riego',    potencial: 'alto'  },
-];
+const toDMS = (decimal, axis) => {
+  const dir = axis === 'lat' ? (decimal >= 0 ? 'N' : 'S') : (decimal >= 0 ? 'E' : 'O');
+  const abs = Math.abs(decimal);
+  const deg = Math.floor(abs);
+  const minFloat = (abs - deg) * 60;
+  const min = Math.floor(minFloat);
+  const sec = ((minFloat - min) * 60).toFixed(1);
+  return `${deg}° ${min}' ${sec}" ${dir}`;
+};
 
-const CICLO_OPTIONS = ['Todos', 'Otoño/Primavera', 'Primavera/Verano'];
+const CICLO_OPTIONS = ['Todos', 'Agrícola', 'Forrajero'];
 const RIEGO_OPTIONS = ['Todos', 'Riego', 'Temporal'];
 const POTENCIAL_COLORS = { alto: '#038310', medio: '#f0a716', bajo: '#a81d1d' };
 const POTENCIAL_LABELS = { alto: 'Alto', medio: 'Medio', bajo: 'Bajo' };
 const DEFAULT_POTENCIAL = { alto: true, medio: true, bajo: false };
 
 const CultivoSelector = ({ onStationSelect }) => {
+  const { cultivos, error: cultivosError } = useCultivos();
   const [selectedStation, setSelectedStation] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [cursorLocation, setCursorLocation] = useState(null);
 
-  // Filtros en edición (panel izquierdo) — se aplican al pulsar "Actualizar mapa".
+  // Producción y Riego filtran la lista de inmediato. Potencial además controla
+  // las capas del mapa, así que se queda en edición hasta pulsar "Actualizar mapa".
   const [ciclo, setCiclo] = useState('Todos');
   const [riego, setRiego] = useState('Todos');
   const [potencial, setPotencial] = useState(DEFAULT_POTENCIAL);
 
-  const [appliedFilters, setAppliedFilters] = useState({
-    ciclo: 'Todos',
-    riego: 'Todos',
-    potencial: DEFAULT_POTENCIAL,
-  });
+  const [appliedPotencial, setAppliedPotencial] = useState(DEFAULT_POTENCIAL);
 
   // Fuerza el remonte de MapaPotencial (recentra y aplica capas) al pulsar los botones de acción.
   const [mapKey, setMapKey] = useState(0);
@@ -39,24 +42,28 @@ const CultivoSelector = ({ onStationSelect }) => {
   // Pestaña activa del panel derecho: 'mapa' o 'cuidados'.
   const [activeTab, setActiveTab] = useState('mapa');
 
+  // Colapsa el panel de filtros/lista en móvil; en escritorio siempre se ve completo.
+  const [isPanelOpen, setIsPanelOpen] = useState(true);
+
   const filteredStations = useMemo(() => {
-    return mockCultivos.filter((c) => {
+    if (!cultivos) return [];
+    return cultivos.filter((c) => {
       const matchesSearch =
         c.fullName.toLowerCase().includes(searchTerm.toLowerCase()) ||
         c.name.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCiclo = appliedFilters.ciclo === 'Todos' || c.ciclo === appliedFilters.ciclo;
-      const matchesRiego = appliedFilters.riego === 'Todos' || c.riego === appliedFilters.riego;
-      const matchesPotencial = appliedFilters.potencial[c.potencial];
+      const matchesCiclo = ciclo === 'Todos' || c.tipoProduccion === ciclo;
+      const matchesRiego = riego === 'Todos' || c.regimen === riego;
+      const matchesPotencial = c.niveles.some((nivel) => appliedPotencial[nivel]);
       return matchesSearch && matchesCiclo && matchesRiego && matchesPotencial;
     });
-  }, [searchTerm, appliedFilters]);
+  }, [cultivos, searchTerm, ciclo, riego, appliedPotencial]);
 
   const handleTogglePotencial = (key) => {
     setPotencial((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
   const handleUpdateMap = () => {
-    setAppliedFilters({ ciclo, riego, potencial });
+    setAppliedPotencial(potencial);
     setMapKey((k) => k + 1);
   };
 
@@ -71,7 +78,6 @@ const CultivoSelector = ({ onStationSelect }) => {
   };
 
   return (
-    
     <div className={styles.card}>
       <div className={styles.cardHeader}>
         <div className={styles.cardHeaderRow}>
@@ -80,30 +86,56 @@ const CultivoSelector = ({ onStationSelect }) => {
               <MapPin size={18} color="#9F2241" />
               <span>Estado Zacatecas</span>
             </div>
-            <h3>Seleccionar Cultivo</h3>
+            <h3 className={styles.selectedName} >Seleccionar Cultivo</h3>
             {selectedStation && (
               <div className={styles.selectedInfo}>
-                <h2 className={styles.selectedName}>{selectedStation.name}</h2>
+                <h3 >{selectedStation.name}</h3>
                 <p className={styles.selectedScientific}>{selectedStation.fullName}</p>
               </div>
             )}
           </div>
 
           <div className={styles.updateBox}>
-            <Clock size={24} color="#9ca3af" />
-            <div>
-              <p className={styles.updateLabel}>Última actualización:</p>
-              <p className={styles.updateValue}>28 de Abril del 2026</p>
+            <div className={styles.updateBoxTop}>
+              <Clock size={24} color="#9ca3af" />
+              <div>
+                <p className={styles.updateLabel}>Última actualización:</p>
+                <p className={styles.updateValue}>28 de Abril del 2026</p>
+              </div>
             </div>
+
+            {selectedStation && (
+              <div className={styles.spaceY}>
+                <DetailsIconLeft
+                  IconDetail={ArrowUpRight}
+                  TitleDetail="Longitud"
+                  TextDetail={cursorLocation ? toDMS(cursorLocation.lng, 'lng') : 'Selecciona un punto en el mapa'}
+                />
+                <DetailsIconLeft
+                  IconDetail={ArrowDownRight}
+                  TitleDetail="Latitud"
+                  TextDetail={cursorLocation ? toDMS(cursorLocation.lat, 'lat') : '—'}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
 
       <div className={styles.body}>
-        {/* Panel izquierdo */}
+          {/* Panel izquierdo */}
         <div className={styles.leftPanel}>
-          <h4 className={styles.filtersTitle}>Filtros</h4>
+          <button
+            type="button"
+            className={styles.leftPanelHeader}
+            onClick={() => setIsPanelOpen((open) => !open)}
+            aria-expanded={isPanelOpen}
+          >
+            <h4 className={styles.filtersTitle}>Filtros</h4>
+            {isPanelOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+          </button>
 
+          <div className={`${styles.leftPanelContent} ${isPanelOpen ? '' : styles.leftPanelContentCollapsed}`}>
           <div className={styles.filterGrid}>
             <div className={styles.filterField}>
               <label className={styles.filterLabel}>Producción</label>
@@ -176,6 +208,14 @@ const CultivoSelector = ({ onStationSelect }) => {
           </button>
 
           <div className={styles.stationList}>
+            {cultivosError && (
+              <p className={styles.emptyText}>No se pudo cargar la información de cultivos.</p>
+            )}
+
+            {!cultivosError && !cultivos && (
+              <p className={styles.emptyText}>Cargando cultivos…</p>
+            )}
+
             {filteredStations.map((station) => (
               <div
                 key={station.id}
@@ -188,19 +228,21 @@ const CultivoSelector = ({ onStationSelect }) => {
                     <p className={styles.descriptiontext}>{station.fullName}</p>
                   </div>
                   <div className={styles.stationMeta}>
-                    <span
-                      className={styles.potencialBadgeSmall}
-                      style={{ backgroundColor: POTENCIAL_COLORS[station.potencial] }}
-                    >
-                      {POTENCIAL_LABELS[station.potencial]}
-                    </span>
-                    <div className={`${styles.statusDot} ${station.active ? styles.statusActive : styles.statusInactive}`} />
+                    {station.niveles.map((nivel) => (
+                      <span
+                        key={nivel}
+                        className={styles.potencialBadgeSmall}
+                        style={{ backgroundColor: POTENCIAL_COLORS[nivel] }}
+                      >
+                        {POTENCIAL_LABELS[nivel]}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
             ))}
 
-            {filteredStations.length === 0 && (
+            {cultivos && filteredStations.length === 0 && (
               <p className={styles.emptyText}>No se encontraron cultivos con estos filtros.</p>
             )}
           </div>
@@ -213,6 +255,7 @@ const CultivoSelector = ({ onStationSelect }) => {
           >
             Seleccionar Estación
           </button>
+          </div>
         </div>
 
         {/* Panel derecho — tabs: mapa de potencial / cuidados del cultivo */}
@@ -237,11 +280,18 @@ const CultivoSelector = ({ onStationSelect }) => {
 
             <div className={styles.tabContent}>
               {activeTab === 'mapa' && (
-                <MapaPotencial key={mapKey} visibleLevels={appliedFilters.potencial} />
+                <MapaPotencial
+                  key={mapKey}
+                  height="100%"
+                  geojsonKey={selectedStation?.geojsonKey}
+                  visibleLevels={appliedPotencial}
+                  selectedLocation={cursorLocation}
+                  onLocationSelect={setCursorLocation}
+                />
               )}
               {activeTab === 'cuidados' && (
                 <div className={styles.cuidadosContent}>
-                  <CuidadoCultivo />
+                  <CuidadoCultivo cultivo={selectedStation?.metadata} nombre={selectedStation?.name} />
                 </div>
               )}
             </div>

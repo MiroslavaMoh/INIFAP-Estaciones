@@ -1,0 +1,187 @@
+{
+  "ajo-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 221
+  },
+  "avena-temporal": {
+    "levels": [
+      "ALTO",
+      "BAJO",
+      "MEDIO"
+    ],
+    "sizeKb": 1332
+  },
+  "cacahuate-temporal": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 447
+  },
+  "canola-temporal": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 1245
+  },
+  "cebada-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 208
+  },
+  "cebada-temporal": {
+    "levels": [
+      "ALTO",
+      "BAJO",
+      "MEDIO"
+    ],
+    "sizeKb": 1342
+  },
+  "cebolla-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 218
+  },
+  "chabacano-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 124
+  },
+  "chile-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 209
+  },
+  "ciruelo-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 212
+  },
+  "durazno-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 214
+  },
+  "durazno-temporal": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 363
+  },
+  "frijol-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 217
+  },
+  "frijol-temporal": {
+    "levels": [
+      "ALTO",
+      "BAJO",
+      "MEDIO"
+    ],
+    "sizeKb": 1900
+  },
+  "girasol-temporal": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 1075
+  },
+  "guayabo-riego": {
+    "levels": [
+      "ALTO"
+    ],
+    "sizeKb": 43
+  },
+  "jitomate-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 217
+  },
+  "maiz-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 217
+  },
+  "maiz-temporal": {
+    "levels": [
+      "ALTO",
+      "BAJO",
+      "MEDIO"
+    ],
+    "sizeKb": 1520
+  },
+  "nopal-tunero-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 31
+  },
+  "nopal-tunero-temporal": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 905
+  },
+  "tomate-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 209
+  },
+  "vid-region-1": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 26
+  },
+  "vid-region-2": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 154
+  },
+  "vid-region-3": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 13
+  },
+  "zanahoria-riego": {
+    "levels": [
+      "ALTO",
+      "MEDIO"
+    ],
+    "sizeKb": 194
+  }
+}
